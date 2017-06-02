@@ -9,7 +9,7 @@ using System.Web.Services.Protocols;
 namespace JSDWebService
 {
     /// <summary>
-    /// Summary description for AdminService
+    /// Summary description for UserService
     /// </summary>
     [WebService(Namespace = "http://dosomething.pl/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -21,34 +21,20 @@ namespace JSDWebService
         //Variables
         public User UserAccount { get; set; }
 
-        #region USER
-        //logowanie
+
+        //Zakładanie wydarzenia
         [WebMethod]
         [SoapHeader("UserAccount")]
-        public bool Login()
+        public bool CreateEvent(Event Event)
         {
-            return UserFunctions.AuthorizeUser(UserAccount);
-        }
-
-        //Rejestracja
-        [WebMethod]
-        public bool AddUser(User usr)
-        {
-            return UserFunctions.AddUser(usr);
-        }
-
-        #endregion
-
-
-        //Metoda z autoryzacją
-        [WebMethod]
-        [SoapHeader("UserAccount")]
-        public bool Test()
-        {
-            if (UserFunctions.AuthorizeUser(UserAccount))
+           if (UserFunctions.AuthorizeUser(UserAccount))
                 return Functions.Test();
             else
                 return false;
         }
+
+       
+
+                
     }
 }

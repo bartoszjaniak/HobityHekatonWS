@@ -1,4 +1,4 @@
-﻿using JSDTestClient.AdminServiceReference;
+﻿using JSDTestClient.UserServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace JSDTestClient
         
         //Variables
         public static UserAccount MyUser = new UserAccount();
-        public static AdminService ws = new AdminService();
+        public static UserService ws = new UserService();
         public static bool isLogin = false;
 
         //Commands

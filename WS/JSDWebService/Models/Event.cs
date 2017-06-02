@@ -17,7 +17,6 @@ namespace JSDWebService.Models
         public double Longitude { get; set; }
         public double Latitude { get; set; }
         public string Adres { get; set; }
-        public bool IsPublic { get; set; }
-        
+        public bool IsPublic { get; set; }        
     }
 }

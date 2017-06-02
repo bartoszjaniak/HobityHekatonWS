@@ -9,7 +9,7 @@ using System.Web.Services.Protocols;
 namespace JSDWebService
 {
     /// <summary>
-    /// Summary description for AdminService
+    /// Summary description for UserService
     /// </summary>
     [WebService(Namespace = "http://dosomething.pl/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]

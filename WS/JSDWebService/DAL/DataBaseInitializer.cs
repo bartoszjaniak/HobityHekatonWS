@@ -15,7 +15,7 @@ namespace JSDWebService
         /// <param name="context"></param>
         protected override void Seed(DataBaseContext context)
         {
-            User user = new User() { nick = "test", points = 0, wins = 0, loses = 0 };
+          
             UserAccount userAccount = new UserAccount() { login = "test", password = "test" };
 
           

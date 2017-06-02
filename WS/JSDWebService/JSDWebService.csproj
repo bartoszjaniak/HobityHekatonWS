@@ -87,8 +87,6 @@
       <DependentUpon>AdminService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Models\Sesion.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserFunctions.cs" />

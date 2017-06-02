@@ -18,7 +18,6 @@ namespace JSDWebService
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<JSDWebService.Models.User> User { get; set; }
         public DbSet<UserAccount> UserAccount { get; set; }
     }
 }

@@ -15,25 +15,25 @@ namespace JSDWebService
     {
 
 
-        public static bool AuthorizeUser(UserAccount usr)
+        public static bool AuthorizeUser(User usr)
         {
             using (DataBaseContext db = new DataBaseContext())
             {
-                var U = db.UserAccount.Find(usr.login);
+                var U = db.User.Find(usr.login);
                 if (U == null) return false;
                 if (usr.password == U.password) return true;
             }
             return false;
         }
 
-        public static bool AddUser(UserAccount usr)
+        public static bool AddUser(User usr)
         {
             using (var db = new DataBaseContext())
             {
-                UserAccount U = db.UserAccount.Find(usr.login);
+                User U = db.User.Find(usr.login);
                 if (U == null)
                 {
-                    db.UserAccount.Add(usr);
+                    db.User.Add(usr);
                     db.SaveChanges();
                     return true;
                 }                    
@@ -41,10 +41,10 @@ namespace JSDWebService
             return false;
         }
 
-        public static bool ChangePassword(UserAccount usr, string newPassword){
+        public static bool ChangePassword(User usr, string newPassword){
             using (var db = new DataBaseContext())
             {
-                UserAccount U = db.UserAccount.Find(usr.login);
+                User U = db.User.Find(usr.login);
                 if (U == null)
                 {
                     U.password = newPassword;

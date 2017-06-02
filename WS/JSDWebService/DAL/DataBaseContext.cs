@@ -12,12 +12,16 @@ namespace JSDWebService
     public class DataBaseContext : DbContext
     {
         public DataBaseContext()
-            : base("MojaBazia2")
+            : base("MakeMyDay")
         {
             Database.SetInitializer<DataBaseContext>(new DataBaseInitializer());
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<UserAccount> UserAccount { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Event> Event { get; set; }
+        public DbSet<Friends> Friends { get; set; }
+        public DbSet<Invite> Invite { get; set; }
+
     }
 }

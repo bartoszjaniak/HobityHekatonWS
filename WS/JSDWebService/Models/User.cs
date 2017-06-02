@@ -7,7 +7,7 @@ using System.Web.Services.Protocols;
 
 namespace JSDWebService.Models
 {
-    public class UserAccount : SoapHeader
+    public class User : SoapHeader
     {
         public int ID { get; set; }
         [Key]

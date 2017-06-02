@@ -16,41 +16,34 @@ namespace JSDWebService
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class AdminService : WebService
+    public class EventService : WebService
     {
         //Variables
-        public UserAccount UserAccount { get; set; }
+        public User UserAccount { get; set; }
 
         #region USER
+        //logowanie
         [WebMethod]
         [SoapHeader("UserAccount")]
         public bool Login()
         {
             return UserFunctions.AuthorizeUser(UserAccount);
-
         }
 
-        [WebMethod]        
-        public bool AddUser(UserAccount usr)
+        //Rejestracja
+        [WebMethod]
+        public bool AddUser(User usr)
         {
             return UserFunctions.AddUser(usr);
         }
-        
-        [WebMethod]
-        public bool ChangePassword(string newPassword)
-        {
-            if (UserFunctions.AuthorizeUser(UserAccount))
-            {
-                return UserFunctions.ChangePassword(UserAccount, newPassword);
-            }
-            return false;
-        }
+
         #endregion
 
 
+        //Metoda z autoryzacją
         [WebMethod]
         [SoapHeader("UserAccount")]
-        public bool LodadQuestionsToDataBase()
+        public bool Test()
         {
             if (UserFunctions.AuthorizeUser(UserAccount))
                 return Functions.Test();

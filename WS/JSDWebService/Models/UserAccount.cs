@@ -11,7 +11,7 @@ namespace JSDWebService.Models
     {
         public int ID { get; set; }
         [Key]
-        public string login { get; set; }
+        public string login { get; set; }       
         public string password { get; set; }
     }
 }

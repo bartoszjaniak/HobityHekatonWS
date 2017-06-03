@@ -116,24 +116,15 @@
         </s:complexType>
       </s:element>
       <s:element name="ShowFriends">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
-          </s:sequence>
-        </s:complexType>
+        <s:complexType />
       </s:element>
       <s:element name="ShowFriendsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ShowFriendsResult" type="tns:ArrayOfUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShowFriendsResult" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfUser">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
-        </s:sequence>
-      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="LoginSoapIn">
@@ -347,10 +338,10 @@
   </wsdl:binding>
   <wsdl:service name="WebSerciceMMD">
     <wsdl:port name="WebSerciceMMDSoap" binding="tns:WebSerciceMMDSoap">
-      <soap:address location="http://localhost:57574/WebSerciceMMD.asmx" />
+      <soap:address location="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx" />
     </wsdl:port>
     <wsdl:port name="WebSerciceMMDSoap12" binding="tns:WebSerciceMMDSoap12">
-      <soap12:address location="http://localhost:57574/WebSerciceMMD.asmx" />
+      <soap12:address location="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

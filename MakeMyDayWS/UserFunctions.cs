@@ -29,7 +29,7 @@ namespace MakeMyDayWS
         {
             using (var db = new DataBaseContext())
             {
-                Account U = db.Account.Find(usr.login);
+                Account U = db.Account.Where(u => u.login == usr.login).Select(u => u).First();
                 if (U == null)
                 {
                     usr.user = new User() { Nick = usr.login };

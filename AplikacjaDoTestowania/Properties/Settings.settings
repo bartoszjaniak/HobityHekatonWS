@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AplikacjaDoTestowania_WS_WebSerciceMMD" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:57574/WebSerciceMMD.asmx</Value>
+      <Value Profile="(Default)">http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

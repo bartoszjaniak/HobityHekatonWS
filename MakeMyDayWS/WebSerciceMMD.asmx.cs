@@ -71,9 +71,14 @@ namespace MakeMyDayWS
 
         //Pokaż liste znajomych
         [WebMethod]
-        public List<User> ShowFriends(User user)
+        //public List<User> ShowFriends(User user)
+        //{
+        //    return Functions.ZwrocListeZnajomych(user);
+        //}
+
+        public string ShowFriends()
         {
-            return Functions.ZwrocListeZnajomych(user);
+            return Functions.test2();
         }
 
 

@@ -43,11 +43,10 @@ namespace AplikacjaDoTestowania
                         Login();
                         break;
                     case 2: //NOWE KONTO
-                        if (isLog())
                             NewAccount();
                         break;
                     case 3: //ZMIEŃ HASŁO
-                        ws.Test1();
+                        Console.WriteLine(ws.ShowFriends());
                         
                             //ChangePassword();
                             break;

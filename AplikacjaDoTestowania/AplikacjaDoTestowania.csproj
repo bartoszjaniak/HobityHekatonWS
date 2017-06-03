@@ -69,9 +69,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WS\User.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
     <None Include="Web References\WS\WebSerciceMMD.wsdl" />
   </ItemGroup>
   <ItemGroup>
@@ -81,10 +78,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:57574/WebSerciceMMD.asmx">
+    <WebReferenceUrl Include="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WS\</RelPath>
-      <UpdateFromURL>http://localhost:57574/WebSerciceMMD.asmx</UpdateFromURL>
+      <UpdateFromURL>http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

@@ -288,24 +288,22 @@ namespace AplikacjaDoTestowania.WS {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ShowFriends", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public User[] ShowFriends(User user) {
-            object[] results = this.Invoke("ShowFriends", new object[] {
-                        user});
-            return ((User[])(results[0]));
+        public string ShowFriends() {
+            object[] results = this.Invoke("ShowFriends", new object[0]);
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void ShowFriendsAsync(User user) {
-            this.ShowFriendsAsync(user, null);
+        public void ShowFriendsAsync() {
+            this.ShowFriendsAsync(null);
         }
         
         /// <remarks/>
-        public void ShowFriendsAsync(User user, object userState) {
+        public void ShowFriendsAsync(object userState) {
             if ((this.ShowFriendsOperationCompleted == null)) {
                 this.ShowFriendsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowFriendsOperationCompleted);
             }
-            this.InvokeAsync("ShowFriends", new object[] {
-                        user}, this.ShowFriendsOperationCompleted, userState);
+            this.InvokeAsync("ShowFriends", new object[0], this.ShowFriendsOperationCompleted, userState);
         }
         
         private void OnShowFriendsOperationCompleted(object arg) {
@@ -753,10 +751,10 @@ namespace AplikacjaDoTestowania.WS {
         }
         
         /// <remarks/>
-        public User[] Result {
+        public string Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((User[])(this.results[0]));
+                return ((string)(this.results[0]));
             }
         }
     }

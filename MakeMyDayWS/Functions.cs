@@ -64,7 +64,11 @@ namespace MakeMyDayWS
                 return true;
             }
         }
+        public static string test2()
+        {
+            return "dzialam";
 
+        }
         public static List<User> ZwrocListeZnajomych (User user)
         {
             

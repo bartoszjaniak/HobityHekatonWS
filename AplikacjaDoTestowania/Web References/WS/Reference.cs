@@ -29,7 +29,7 @@ namespace AplikacjaDoTestowania.WS {
     [System.Web.Services.WebServiceBindingAttribute(Name="WebSerciceMMDSoap", Namespace="http://tempuri.org/")]
     public partial class WebSerciceMMD : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private User userValueField;
+        private Account accountValueField;
         
         private System.Threading.SendOrPostCallback LoginOperationCompleted;
         
@@ -55,12 +55,12 @@ namespace AplikacjaDoTestowania.WS {
             }
         }
         
-        public User UserValue {
+        public Account AccountValue {
             get {
-                return this.userValueField;
+                return this.accountValueField;
             }
             set {
-                this.userValueField = value;
+                this.accountValueField = value;
             }
         }
         
@@ -104,7 +104,7 @@ namespace AplikacjaDoTestowania.WS {
         public event CreateEventCompletedEventHandler CreateEventCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("UserValue")]
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AccountValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Login", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool Login() {
             object[] results = this.Invoke("Login", new object[0]);
@@ -133,19 +133,19 @@ namespace AplikacjaDoTestowania.WS {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/AddUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public bool AddUser(User usr) {
+        public bool AddUser(Account usr) {
             object[] results = this.Invoke("AddUser", new object[] {
                         usr});
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void AddUserAsync(User usr) {
+        public void AddUserAsync(Account usr) {
             this.AddUserAsync(usr, null);
         }
         
         /// <remarks/>
-        public void AddUserAsync(User usr, object userState) {
+        public void AddUserAsync(Account usr, object userState) {
             if ((this.AddUserOperationCompleted == null)) {
                 this.AddUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddUserOperationCompleted);
             }
@@ -188,7 +188,7 @@ namespace AplikacjaDoTestowania.WS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("UserValue")]
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AccountValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Test", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool Test() {
             object[] results = this.Invoke("Test", new object[0]);
@@ -216,7 +216,7 @@ namespace AplikacjaDoTestowania.WS {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapHeaderAttribute("UserValue")]
+        [System.Web.Services.Protocols.SoapHeaderAttribute("AccountValue")]
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CreateEvent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool CreateEvent(Event Event) {
             object[] results = this.Invoke("CreateEvent", new object[] {
@@ -271,7 +271,7 @@ namespace AplikacjaDoTestowania.WS {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://tempuri.org/", IsNullable=false)]
-    public partial class User : System.Web.Services.Protocols.SoapHeader {
+    public partial class Account : System.Web.Services.Protocols.SoapHeader {
         
         private int idField;
         
@@ -319,6 +319,39 @@ namespace AplikacjaDoTestowania.WS {
             }
             set {
                 this.anyAttrField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class User {
+        
+        private int idField;
+        
+        private string nickField;
+        
+        /// <remarks/>
+        public int ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Nick {
+            get {
+                return this.nickField;
+            }
+            set {
+                this.nickField = value;
             }
         }
     }

@@ -13,6 +13,15 @@ namespace MakeMyDayWS
         public static bool Test()
         {
             return true;
-        }       
+        }
+       
+        public static List<Event> WyswietlWydarzenia(User user){
+            
+            List<Event> Lista = new List<Event>();
+            Lista.Add(new Event() { Description = "Testowe wydarzenie" });
+            Lista.Add(new Event() { Description = "Testowe wydarzenie2" });
+            return Lista;
+        }
+
     }
 }

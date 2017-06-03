@@ -5,7 +5,10 @@
     <Setting Name="JSDTestClient_localhost1_UserService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:61922/UserService.asmx</Value>
     </Setting>
-    <Setting Name="JSDTestClient_localhost_EventService" Type="(Web Service URL)" Scope="Application">
+    <Setting Name="JSDTestClient_localhost_EventService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:61922/EventService.asmx</Value>
+    </Setting>
+    <Setting Name="JSDTestClient_EventService_EventService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:61922/EventService.asmx</Value>
     </Setting>
   </Settings>

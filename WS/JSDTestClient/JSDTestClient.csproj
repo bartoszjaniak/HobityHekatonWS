@@ -50,7 +50,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Web References\AdminServiceReference\Reference.cs">
+    <Compile Include="Web References\WS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -62,8 +62,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\AdminServiceReference\AdminService.wsdl" />
-    <None Include="Web References\AdminServiceReference\Reference.map">
+    <None Include="Web References\WS\EventService.wsdl" />
+    <None Include="Web References\WS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -75,20 +75,20 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:61922/AdminService.asmx">
+    <WebReferenceUrl Include="http://localhost:61922/EventService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\AdminServiceReference\</RelPath>
-      <UpdateFromURL>http://localhost:61922/AdminService.asmx</UpdateFromURL>
+      <RelPath>Web References\WS\</RelPath>
+      <UpdateFromURL>http://localhost:61922/EventService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>JSDTestClient_localhost1_AdminService</CachedSettingsPropName>
+      <CachedSettingsPropName>JSDTestClient_EventService_EventService</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web References\AdminServiceReference\AdminService.disco" />
+    <None Include="Web References\WS\EventService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

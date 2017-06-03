@@ -1,4 +1,4 @@
-﻿using JSDTestClient.UserServiceReference;
+﻿using JSDTestClient.WS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +12,8 @@ namespace JSDTestClient
     {
         
         //Variables
-        public static UserAccount MyUser = new UserAccount();
-        public static UserService ws = new UserService();
+        public static User MyUser = new User();
+        public static EventService ws = new EventService();
         public static bool isLogin = false;
 
         //Commands
@@ -49,11 +49,11 @@ namespace JSDTestClient
                         break;
                     case 3: //ZMIEŃ HASŁO
                         if (isLog())
-                        ChangePassword();
+                            foo();
                         break;
                     case 4: //WCZYTAJ PYTANIA
                         if (isLog())
-                        LoadQuestionsToDataBase();
+                            foo();
                         break;                    
                     default:
                         Console.WriteLine("Błędna komenda. Aby uzyskać listę dostępnych komend użyj poplecenia HELP");                  
@@ -64,9 +64,12 @@ namespace JSDTestClient
 
         }
 
-        
 
 
+        private static void foo()
+        {
+            int i = 0;
+        }
 
         //Functions
         private static void ShowCommandList()
@@ -93,7 +96,7 @@ namespace JSDTestClient
             MyUser.login = Console.ReadLine();
             Console.Write("Password: ");
             MyUser.password = Console.ReadLine();
-            ws.UserAccountValue = MyUser;
+            ws.UserValue = MyUser;
             isLogin = ws.Login();
             Console.WriteLine(isLogin ? "Zalogowano: " + MyUser.login : "Złe dane");           
         }
@@ -106,22 +109,9 @@ namespace JSDTestClient
             MyUser.password = Console.ReadLine();                        
             Console.WriteLine(ws.AddUser(MyUser) ? "Utworzono nowe konto: " + MyUser.login : "Błąd");        
         }
+             
 
-        private static void ChangePassword()
-        {
-
-            Console.Write("Nowe hasło: ");
-            string newPassword = Console.ReadLine();
-            ws.UserAccountValue = MyUser;
-            MyUser.password = newPassword;
-            Console.WriteLine(ws.ChangePassword(newPassword) ? "Zmieniono hasło!" : "Błąd");
-        }
-
-        private static void LoadQuestionsToDataBase()
-        {
-            ws.UserAccountValue = MyUser;
-            Console.WriteLine(ws.LodadQuestionsToDataBase() == true ? "Wykonano" : "Nie wykonano");
-        }
+        
 
     }
 }

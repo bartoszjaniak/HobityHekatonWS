@@ -35,11 +35,20 @@ namespace JSDTestClient.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:61922/EventService.asmx")]
         public string JSDTestClient_localhost_EventService {
             get {
                 return ((string)(this["JSDTestClient_localhost_EventService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:61922/EventService.asmx")]
+        public string JSDTestClient_EventService_EventService {
+            get {
+                return ((string)(this["JSDTestClient_EventService_EventService"]));
             }
         }
     }

@@ -21,6 +21,36 @@ namespace JSDWebService
         //Variables
         public User UserAccount { get; set; }
 
+        #region USER
+        //logowanie
+        [WebMethod]
+        [SoapHeader("UserAccount")]
+        public bool Login()
+        {
+            return UserFunctions.AuthorizeUser(UserAccount);
+        }
+
+        //Rejestracja
+        [WebMethod]
+        public bool AddUser(User usr)
+        {
+            return UserFunctions.AddUser(usr);
+        }
+
+        #endregion
+
+
+        //Metoda z autoryzacją
+        [WebMethod]
+        [SoapHeader("UserAccount")]
+        public bool Test()
+        {
+            if (UserFunctions.AuthorizeUser(UserAccount))
+                return Functions.Test();
+            else
+                return false;
+        }
+
 
         //Zakładanie wydarzenia
         [WebMethod]

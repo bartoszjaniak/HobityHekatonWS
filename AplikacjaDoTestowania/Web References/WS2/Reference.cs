@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace AplikacjaDoTestowania.WS {
+namespace AplikacjaDoTestowania.WS2 {
     using System;
     using System.Web.Services;
     using System.Diagnostics;

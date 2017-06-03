@@ -1,4 +1,4 @@
-﻿using AplikacjaDoTestowania.WS;
+﻿using AplikacjaDoTestowania.WS2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace AplikacjaDoTestowania
                         Login();
                         break;
                     case 2: //NOWE KONTO
-                            NewAccount();
+                        NewAccount();
                         break;
                     case 3: //ZMIEŃ HASŁO
                         Console.WriteLine(ws.ShowFriends());
@@ -92,8 +92,8 @@ namespace AplikacjaDoTestowania
             MyUser.login = Console.ReadLine();
             Console.Write("Password: ");
             MyUser.password = Console.ReadLine();
-            ws.AccountValue = MyUser;
-            isLogin = ws.Login();
+            
+            isLogin = ws.Login(MyUser);
             Console.WriteLine(isLogin ? "Zalogowano: " + MyUser.login : "Złe dane");
         }
 

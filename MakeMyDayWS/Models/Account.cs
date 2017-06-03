@@ -7,7 +7,7 @@ using System.Web.Services.Protocols;
 
 namespace MakeMyDayWS
 {
-    public class Account : SoapHeader
+    public class Account
     {
         [Key]
         public int ID { get; set; }

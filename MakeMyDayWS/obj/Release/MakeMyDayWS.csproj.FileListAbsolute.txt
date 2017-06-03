@@ -16,3 +16,4 @@ C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyD
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.Migrations._5.resources
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.Migrations._6.resources
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.Migrations._7.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.Migrations._8.resources

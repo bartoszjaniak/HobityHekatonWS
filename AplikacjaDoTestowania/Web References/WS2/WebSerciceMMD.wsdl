@@ -335,10 +335,10 @@
   </wsdl:binding>
   <wsdl:service name="WebSerciceMMD">
     <wsdl:port name="WebSerciceMMDSoap" binding="tns:WebSerciceMMDSoap">
-      <soap:address location="http://localhost:57574/WebSerciceMMD.asmx" />
+      <soap:address location="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx" />
     </wsdl:port>
     <wsdl:port name="WebSerciceMMDSoap12" binding="tns:WebSerciceMMDSoap12">
-      <soap12:address location="http://localhost:57574/WebSerciceMMD.asmx" />
+      <soap12:address location="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -24,10 +24,9 @@ namespace MakeMyDayWS
         #region USER
         //logowanie
         [WebMethod]
-        [SoapHeader("UserAccount")]
-        public bool Login()
+        public bool Login(Account account)
         {
-            return UserFunctions.AuthorizeUser(UserAccount);
+            return UserFunctions.AuthorizeUser(account);
         }
 
         //Rejestracja
@@ -70,12 +69,12 @@ namespace MakeMyDayWS
         }
 
         //Pokaż liste znajomych
-        [WebMethod]
+
         //public List<User> ShowFriends(User user)
         //{
         //    return Functions.ZwrocListeZnajomych(user);
         //}
-
+        [WebMethod]
         public string ShowFriends()
         {
             return Functions.test2();

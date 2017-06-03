@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services.Protocols;
 
+
 namespace MakeMyDayWS
 {
     public class UserFunctions : SoapHeader
@@ -18,7 +19,7 @@ namespace MakeMyDayWS
         {
             using (DataBaseContext db = new DataBaseContext())
             {
-                Account U = db.Account.Where(u=>u.login == usr.login).Select(u=>u).First();
+                Account U = db.Account.Where(u=>u.login == usr.login).Select(u=>u).FirstOrDefault();
                 if (U == null) return false;
                 if (usr.password == U.password) return true;
             }
@@ -29,7 +30,7 @@ namespace MakeMyDayWS
         {
             using (var db = new DataBaseContext())
             {
-                Account U = db.Account.Where(u => u.login == usr.login).Select(u => u).First();
+                Account U = db.Account.Where(u => u.login == usr.login).Select(u => u).FirstOrDefault();
                 if (U == null)
                 {
                     usr.user = new User() { Nick = usr.login };

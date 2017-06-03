@@ -3,4 +3,3 @@ C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\AplikacjaDoTestowania\bin\Debug
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\AplikacjaDoTestowania\bin\Debug\AplikacjaDoTestowania.pdb
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\AplikacjaDoTestowania\obj\Debug\AplikacjaDoTestowania.exe
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\AplikacjaDoTestowania\obj\Debug\AplikacjaDoTestowania.pdb
-C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\AplikacjaDoTestowania\obj\Debug\AplikacjaDoTestowania.csprojResolveAssemblyReference.cache

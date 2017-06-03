@@ -26,7 +26,7 @@ namespace MakeMyDayWS
                 var Invites = db.Invite.Where(u => u.Invited == user).Select(u => u.Event.ID);
                 foreach(var item in Invites)
                 {
-                    EventList.Add(db.Event.Where(u => u.ID == item).Select(u => u).First());
+                    EventList.Add(db.Event.Where(u => u.ID == item).Select(u => u).FirstOrDefault());
                 }
             }
 
@@ -39,7 +39,7 @@ namespace MakeMyDayWS
 
             using (DataBaseContext db = new DataBaseContext())
             {
-                var PotencialFriend = db.User.Where(u => u.Nick == nick).Select(u => u).First();
+                var PotencialFriend = db.User.Where(u => u.Nick == nick).Select(u => u).FirstOrDefault();
                 if(PotencialFriend == null) return 2;
                 var Friends = db.Friends.Where(u => u.User1 == user && u.User2 == PotencialFriend).Where(u => u.User2 == user && u.User1 == PotencialFriend).Select(u => u);
                 if (Friends != null) return 1;

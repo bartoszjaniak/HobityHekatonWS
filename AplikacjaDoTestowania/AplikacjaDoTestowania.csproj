@@ -50,6 +50,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WS2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +67,14 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Web References\WS2\Event1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS2\WebSerciceMMD.wsdl" />
     <None Include="Web References\WS\Event.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -78,10 +91,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx">
+    <WebReferenceUrl Include="http://localhost:57574/WebSerciceMMD.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WS\</RelPath>
-      <UpdateFromURL>http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:57574/WebSerciceMMD.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -89,9 +102,23 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>AplikacjaDoTestowania_WS_WebSerciceMMD</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS2\</RelPath>
+      <UpdateFromURL>http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AplikacjaDoTestowania_net_azurewebsites_makemyday222_WebSerciceMMD</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\WS\WebSerciceMMD.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WS2\WebSerciceMMD.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

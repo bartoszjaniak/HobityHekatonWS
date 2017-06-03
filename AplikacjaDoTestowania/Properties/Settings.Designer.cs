@@ -26,10 +26,20 @@ namespace AplikacjaDoTestowania.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:57574/WebSerciceMMD.asmx")]
         public string AplikacjaDoTestowania_WS_WebSerciceMMD {
             get {
                 return ((string)(this["AplikacjaDoTestowania_WS_WebSerciceMMD"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://makemyday222.azurewebsites.net/WebSerciceMMD.asmx")]
+        public string AplikacjaDoTestowania_net_azurewebsites_makemyday222_WebSerciceMMD {
+            get {
+                return ((string)(this["AplikacjaDoTestowania_net_azurewebsites_makemyday222_WebSerciceMMD"]));
             }
         }
     }

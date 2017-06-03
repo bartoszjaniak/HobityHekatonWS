@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using JSDWebService.Models;
-using MakeMyDayWS.Models;
 
-namespace JSDWebService
+
+namespace MakeMyDayWS
 {
     public class DataBaseInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<DataBaseContext>
     {

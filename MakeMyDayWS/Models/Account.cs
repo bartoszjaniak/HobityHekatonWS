@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services.Protocols;
 
-namespace JSDWebService.Models
+namespace MakeMyDayWS
 {
     public class Account : SoapHeader
     {

@@ -40,6 +40,11 @@ namespace MakeMyDayWS
 
         #endregion
 
+        [WebMethod]
+        public bool Test1()
+        {
+            return Functions.Test();
+        }
 
         //Metoda z autoryzacją
         [WebMethod]

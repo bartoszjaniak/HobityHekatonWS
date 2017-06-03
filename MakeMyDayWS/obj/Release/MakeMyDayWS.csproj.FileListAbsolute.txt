@@ -1,0 +1,12 @@
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\MakeMyDayWS.dll.config
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\MakeMyDayWS.dll
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\MakeMyDayWS.pdb
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.dll
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.SqlServer.dll
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.xml
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.SqlServer.xml
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.csprojResolveAssemblyReference.cache
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.Migrations._1.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.csproj.GenerateResource.Cache
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.dll
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.pdb

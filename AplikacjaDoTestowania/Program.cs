@@ -48,12 +48,13 @@ namespace AplikacjaDoTestowania
                         break;
                     case 3: //ZMIEŃ HASŁO
                         ws.Test1();
+                        
                             //ChangePassword();
                             break;
                         //case 4: //WCZYTAJ PYTANIA
                         //    if (isLog())
                         //LoadQuestionsToDataBase();
-                        break;
+                       
                     default:
                         Console.WriteLine("Błędna komenda. Aby uzyskać listę dostępnych komend użyj poplecenia HELP");
                         break;

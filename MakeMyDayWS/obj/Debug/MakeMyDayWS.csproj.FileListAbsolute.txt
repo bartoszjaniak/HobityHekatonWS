@@ -17,8 +17,8 @@ C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.SqlServer.dll
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.xml
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\bin\EntityFramework.SqlServer.xml
-C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.csprojResolveAssemblyReference.cache
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._1.resources
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.csproj.GenerateResource.Cache
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.dll
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.pdb
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._2.resources

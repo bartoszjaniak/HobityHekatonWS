@@ -20,7 +20,7 @@ namespace MakeMyDayWS
     public class WebSerciceMMD : System.Web.Services.WebService
     {
         //Variables
-        public User UserAccount { get; set; }
+        public Account UserAccount { get; set; }
 
         #region USER
         //logowanie
@@ -33,7 +33,7 @@ namespace MakeMyDayWS
 
         //Rejestracja
         [WebMethod]
-        public bool AddUser(User usr)
+        public bool AddUser(Account usr)
         {
             return UserFunctions.AddUser(usr);
         }

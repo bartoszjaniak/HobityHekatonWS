@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.Web.Services.Protocols;
 
-namespace JSDWebService.Models
+namespace MakeMyDayWS.Models
 {
-    public class User : SoapHeader
+    public class User
     {
         [Key]
-        public int ID { get; set; }        
-        public string login { get; set; }       
-        public string password { get; set; }
+        public int ID { get; set; }
+        public string Nick { get; set; } 
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using JSDWebService.Models;
+using MakeMyDayWS.Models;
 
 namespace JSDWebService
 {
@@ -15,11 +16,13 @@ namespace JSDWebService
         /// <param name="context"></param>
         protected override void Seed(DataBaseContext context)
         {          
-            User userAccount = new User() { login = "test", password = "test" };
-            User userAccount2 = new User() { login = "test", password = "test" };
-            Event ev = new Event() { Name = "Piwko", StartDate = DateTime.Now, Orgaznizer = userAccount, Longitude = 123.123, Latitude = 21.12312, Icon = 1, Description = "Piwko nad Odrą", IsPublic = false, TimeInHours = 3 };
-            Friends fr = new Friends() { User1 = userAccount, User2 = userAccount2 };
-            Invite inv = new Invite() { Event = ev, Invited = userAccount2, Answer = true };
+            Account userAccount = new Account() { login = "test", password = "test" };
+            User user1 = new User() { Nick = "test" };
+            User user2 = new User() { Nick = "test2"};
+
+            Event ev = new Event() { Name = "Piwko", StartDate = DateTime.Now, Orgaznizer = user1, Longitude = 123.123, Latitude = 21.12312, Icon = 1, Description = "Piwko nad Odrą", IsPublic = false, TimeInHours = 3 };
+            Friends fr = new Friends() { User1 = user1, User2 = user2 };
+            Invite inv = new Invite() { Event = ev, Invited = user2, Answer = true };
             context.User.Add(userAccount);
             context.Event.Add(ev);
             context.SaveChanges();

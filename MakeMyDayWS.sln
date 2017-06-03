@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeMyDayWS", "MakeMyDayWS\MakeMyDayWS.csproj", "{C204417E-0700-48E4-BF26-C4EE16D60360}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplikacjaDoTestowania", "AplikacjaDoTestowania\AplikacjaDoTestowania.csproj", "{634D3CE2-755A-4535-BEB3-B882ACB252B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C204417E-0700-48E4-BF26-C4EE16D60360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C204417E-0700-48E4-BF26-C4EE16D60360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C204417E-0700-48E4-BF26-C4EE16D60360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634D3CE2-755A-4535-BEB3-B882ACB252B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634D3CE2-755A-4535-BEB3-B882ACB252B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634D3CE2-755A-4535-BEB3-B882ACB252B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634D3CE2-755A-4535-BEB3-B882ACB252B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

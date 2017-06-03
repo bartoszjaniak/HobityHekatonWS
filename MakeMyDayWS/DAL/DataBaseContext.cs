@@ -18,7 +18,7 @@ namespace JSDWebService
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<User> User { get; set; }
+        public DbSet<Account> User { get; set; }
         public DbSet<Event> Event { get; set; }
         public DbSet<Friends> Friends { get; set; }
         public DbSet<Invite> Invite { get; set; }

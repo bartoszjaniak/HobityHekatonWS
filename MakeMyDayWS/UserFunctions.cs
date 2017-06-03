@@ -18,7 +18,7 @@ namespace MakeMyDayWS
         {
             using (DataBaseContext db = new DataBaseContext())
             {
-                var U = db.User.Find(usr.login);
+                Account U = db.Account.Where(u=>u.login == usr.login).Select(u=>u).First();
                 if (U == null) return false;
                 if (usr.password == U.password) return true;
             }
@@ -29,10 +29,11 @@ namespace MakeMyDayWS
         {
             using (var db = new DataBaseContext())
             {
-                Account U = db.User.Find(usr.login);
+                Account U = db.Account.Find(usr.login);
                 if (U == null)
                 {
-                    db.User.Add(usr);
+                    usr.user = new User() { Nick = usr.login };
+                    db.Account.Add(usr);
                     db.SaveChanges();
                     return true;
                 }                    
@@ -43,7 +44,7 @@ namespace MakeMyDayWS
         public static bool ChangePassword(Account usr, string newPassword){
             using (var db = new DataBaseContext())
             {
-                Account U = db.User.Find(usr.login);
+                Account U = db.Account.Find(usr.login);
                 if (U == null)
                 {
                     U.password = newPassword;

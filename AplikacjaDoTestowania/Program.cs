@@ -20,7 +20,7 @@ namespace AplikacjaDoTestowania
             "HELP", // 0
             "ZALOGUJ", //1
             "NOWE KONTO", // 2
-            "ZMIEN HASLO", //3
+            "Test", //3
             "WCZYTAJ PYTANIA"  //4
         };
 
@@ -47,12 +47,12 @@ namespace AplikacjaDoTestowania
                             NewAccount();
                         break;
                     case 3: //ZMIEŃ HASŁO
-                        if (isLog())
-                            ChangePassword();
-                        break;
-                    case 4: //WCZYTAJ PYTANIA
-                        if (isLog())
-                            LoadQuestionsToDataBase();
+                        ws.Test1();
+                            //ChangePassword();
+                            break;
+                        //case 4: //WCZYTAJ PYTANIA
+                        //    if (isLog())
+                        //LoadQuestionsToDataBase();
                         break;
                     default:
                         Console.WriteLine("Błędna komenda. Aby uzyskać listę dostępnych komend użyj poplecenia HELP");

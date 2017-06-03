@@ -16,10 +16,17 @@
       <s:complexType name="Account">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
           <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
         </s:sequence>
         <s:anyAttribute />
+      </s:complexType>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nick" type="s:string" />
+        </s:sequence>
       </s:complexType>
       <s:element name="AddUser">
         <s:complexType>
@@ -45,16 +52,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Test">
-        <s:complexType />
-      </s:element>
-      <s:element name="TestResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="TestResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="CreateEvent">
         <s:complexType>
           <s:sequence>
@@ -77,12 +74,6 @@
           <s:element minOccurs="1" maxOccurs="1" name="IsPublic" type="s:boolean" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="User">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Nick" type="s:string" />
-        </s:sequence>
-      </s:complexType>
       <s:element name="CreateEventResponse">
         <s:complexType>
           <s:sequence>
@@ -90,6 +81,59 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ShowEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowEventsResult" type="tns:ArrayOfEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEvent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddFriend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
+            <s:element minOccurs="0" maxOccurs="1" name="nick" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFriendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddFriendResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowFriends">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowFriendsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowFriendsResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="LoginSoapIn">
@@ -113,23 +157,29 @@
   <wsdl:message name="Test1SoapOut">
     <wsdl:part name="parameters" element="tns:Test1Response" />
   </wsdl:message>
-  <wsdl:message name="TestSoapIn">
-    <wsdl:part name="parameters" element="tns:Test" />
-  </wsdl:message>
-  <wsdl:message name="TestSoapOut">
-    <wsdl:part name="parameters" element="tns:TestResponse" />
-  </wsdl:message>
-  <wsdl:message name="TestAccount">
-    <wsdl:part name="Account" element="tns:Account" />
-  </wsdl:message>
   <wsdl:message name="CreateEventSoapIn">
     <wsdl:part name="parameters" element="tns:CreateEvent" />
   </wsdl:message>
   <wsdl:message name="CreateEventSoapOut">
     <wsdl:part name="parameters" element="tns:CreateEventResponse" />
   </wsdl:message>
-  <wsdl:message name="CreateEventAccount">
-    <wsdl:part name="Account" element="tns:Account" />
+  <wsdl:message name="ShowEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowEvents" />
+  </wsdl:message>
+  <wsdl:message name="ShowEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFriendSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFriend" />
+  </wsdl:message>
+  <wsdl:message name="AddFriendSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFriendResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowFriendsSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowFriends" />
+  </wsdl:message>
+  <wsdl:message name="ShowFriendsSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowFriendsResponse" />
   </wsdl:message>
   <wsdl:portType name="WebSerciceMMDSoap">
     <wsdl:operation name="Login">
@@ -144,13 +194,21 @@
       <wsdl:input message="tns:Test1SoapIn" />
       <wsdl:output message="tns:Test1SoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="Test">
-      <wsdl:input message="tns:TestSoapIn" />
-      <wsdl:output message="tns:TestSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="CreateEvent">
       <wsdl:input message="tns:CreateEventSoapIn" />
       <wsdl:output message="tns:CreateEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowEvents">
+      <wsdl:input message="tns:ShowEventsSoapIn" />
+      <wsdl:output message="tns:ShowEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFriend">
+      <wsdl:input message="tns:AddFriendSoapIn" />
+      <wsdl:output message="tns:AddFriendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowFriends">
+      <wsdl:input message="tns:ShowFriendsSoapIn" />
+      <wsdl:output message="tns:ShowFriendsSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebSerciceMMDSoap" type="tns:WebSerciceMMDSoap">
@@ -183,21 +241,37 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Test">
-      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+    <wsdl:operation name="CreateEvent">
+      <soap:operation soapAction="http://tempuri.org/CreateEvent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
-        <soap:header message="tns:TestAccount" part="Account" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CreateEvent">
-      <soap:operation soapAction="http://tempuri.org/CreateEvent" style="document" />
+    <wsdl:operation name="ShowEvents">
+      <soap:operation soapAction="http://tempuri.org/ShowEvents" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
-        <soap:header message="tns:CreateEventAccount" part="Account" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFriend">
+      <soap:operation soapAction="http://tempuri.org/AddFriend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowFriends">
+      <soap:operation soapAction="http://tempuri.org/ShowFriends" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -234,21 +308,37 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Test">
-      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+    <wsdl:operation name="CreateEvent">
+      <soap12:operation soapAction="http://tempuri.org/CreateEvent" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
-        <soap12:header message="tns:TestAccount" part="Account" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CreateEvent">
-      <soap12:operation soapAction="http://tempuri.org/CreateEvent" style="document" />
+    <wsdl:operation name="ShowEvents">
+      <soap12:operation soapAction="http://tempuri.org/ShowEvents" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
-        <soap12:header message="tns:CreateEventAccount" part="Account" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFriend">
+      <soap12:operation soapAction="http://tempuri.org/AddFriend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowFriends">
+      <soap12:operation soapAction="http://tempuri.org/ShowFriends" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />

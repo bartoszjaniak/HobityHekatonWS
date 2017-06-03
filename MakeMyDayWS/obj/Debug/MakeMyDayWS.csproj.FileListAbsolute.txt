@@ -22,4 +22,9 @@ C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDay
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.dll
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.pdb
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._2.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._3.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._4.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._5.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._6.resources
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.Migrations._7.resources
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Debug\MakeMyDayWS.csprojResolveAssemblyReference.cache

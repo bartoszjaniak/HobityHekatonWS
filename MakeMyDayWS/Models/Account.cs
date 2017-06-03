@@ -10,8 +10,10 @@ namespace MakeMyDayWS
     public class Account : SoapHeader
     {
         [Key]
-        public int ID { get; set; }        
+        public int ID { get; set; }
+        public virtual User user { get; set; }
         public string login { get; set; }       
         public string password { get; set; }
+        
     }
 }

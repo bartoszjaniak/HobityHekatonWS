@@ -22,7 +22,7 @@ namespace MakeMyDayWS
             Event ev = new Event() { Name = "Piwko", StartDate = DateTime.Now, Orgaznizer = user1, Longitude = 123.123, Latitude = 21.12312, Icon = 1, Description = "Piwko nad Odrą", IsPublic = false, TimeInHours = 3 };
             Friends fr = new Friends() { User1 = user1, User2 = user2 };
             Invite inv = new Invite() { Event = ev, Invited = user2, Answer = true };
-            context.User.Add(userAccount);
+            context.Account.Add(userAccount);
             context.Event.Add(ev);
             context.SaveChanges();
             base.Seed(context);

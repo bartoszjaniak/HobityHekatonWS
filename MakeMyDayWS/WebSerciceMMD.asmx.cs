@@ -45,27 +45,35 @@ namespace MakeMyDayWS
             return Functions.Test();
         }
 
-        //Metoda z autoryzacją
-        [WebMethod]
-        [SoapHeader("UserAccount")]
-        public bool Test()
-        {
-            if (UserFunctions.AuthorizeUser(UserAccount))
-                return Functions.Test();
-            else
-                return false;
-        }
+       
 
 
         //Zakładanie wydarzenia
         [WebMethod]
-        [SoapHeader("UserAccount")]
         public bool CreateEvent(Event Event)
         {
-            if (UserFunctions.AuthorizeUser(UserAccount))
-                return Functions.Test();
-            else
-                return false;
+            return Functions.UtworzWydarzenie(Event);
+        }
+
+        //Wyświetlanie wydarzeń
+        [WebMethod]
+        public List<Event> ShowEvents(User user)
+        {
+            return Functions.WyswietlWydarzenia(user);
+        }
+
+        //Dodaj znajomego
+        [WebMethod]
+        public int AddFriend(User user, string nick)
+        {
+                return Functions.DodajZnajomego(user,nick);
+        }
+
+        //Pokaż liste znajomych
+        [WebMethod]
+        public List<User> ShowFriends(User user)
+        {
+            return Functions.ZwrocListeZnajomych(user);
         }
 
 

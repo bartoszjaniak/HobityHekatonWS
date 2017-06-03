@@ -22,7 +22,7 @@ namespace MakeMyDayWS
         }
 
 
-        public static int DodajZnajomego(string nick)
+        public static int DodajZnajomego(User user, string nick)
         {
             // 0 - Dodano znajomego
             // 1 - Użytkownik jest już na liście znajomych

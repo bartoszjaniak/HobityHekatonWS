@@ -10,3 +10,4 @@ C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyD
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.csproj.GenerateResource.Cache
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.dll
 C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.pdb
+C:\Users\Bartosz Janiak\Projekty\HobityHekatonWS\MakeMyDayWS\obj\Release\MakeMyDayWS.Migrations._2.resources
